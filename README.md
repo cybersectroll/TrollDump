@@ -11,7 +11,7 @@ Original Project: https://github.com/enkomio/ManagedInjector
   - created boilerplate code to just run your payload directly in the RunOnRemoteProcess() function instead of the previous convoluted way
   - project still uses DLLExport to get a .NET DLL to export functions
      - Note this is not a dependency to the project but more of a postprocessing. DLLExport will modify your final .NET DLL to export a function.
-     - Can do manually the functional exporting manually if you want https://blog.xpnsec.com/rundll32-your-dotnet/
+     - Can manually do the function exporting if you want https://blog.xpnsec.com/rundll32-your-dotnet/
        
 # Compiling  
 - Download project & Compile solution as X64, Release 
