@@ -20,7 +20,7 @@ Original Project: https://github.com/enkomio/ManagedInjector
 # Usage 
 ```
 > Requires High Integrity depending on use case
-> [System.Reflection.Assembly]::LoadFrom("C:\Users\public\TestTrollDump.dll")
+> [System.Reflection.Assembly]::LoadFrom("C:\Users\public\TrollDump.dll")
 > [TrollDump.ForFun]::Main("C:\windows\system32\taskmgr.exe")
 ```
 - In this POC, we do a lsass dump, you can run whatever "DLL exported function logic" you want by modifying the function RunOnRemoteProcess() and recompiling.
@@ -40,6 +40,7 @@ Original Project: https://github.com/enkomio/ManagedInjector
 - DLL should only be used to do injection, actual payload should never be embedded into DLL and should be reflectively loaded
 - Obviously injecting CLR into unmanaged process is suspicious but hey!
 - setwindowshook although a classic technique is most often tied to keylogging, not our use case
+- Can be super creative with whichever GUI process you want to inject (if running as system, can inject into dwm.exe as well)
 
 # Wishlist - Project was done over the weekend and I have no time/intent to pursue the following:
 - Inject into gui-less process 
