@@ -53,8 +53,9 @@ Original Project: https://github.com/enkomio/ManagedInjector
   - you can give this a try by incorporating other techniques, i think its doable
 - Taskmgr will automatically spawn as High Integrity even if our current process is Medium (so technically if we inject DLL into it, its a UAC bypass)
   - The injection seems to work fine as per the WIN API return results
+      - although sendMessage() succeeds, message is silently dropped. Explained here https://stackoverflow.com/questions/40122964/cross-process-postmessage-uipi-restrictions-and-uiaccess-true
   - However, taskmgr fails to call the exported function
-  - reason explained here https://stackoverflow.com/questions/40122964/cross-process-postmessage-uipi-restrictions-and-uiaccess-true
+  
 
 # Disclaimer
 Should only be used for educational purposes!
